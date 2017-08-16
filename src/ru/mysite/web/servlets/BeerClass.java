@@ -11,11 +11,8 @@ public class BeerClass extends HttpServlet {
         String c = request.getParameter("color");
         BeerExpert be = new BeerExpert();
         List<String> result = be.getBrands(c);
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        out.println("Beer Selection Advice<br>");
-        for (String h:result)
-            out.print("<br>try: " +h );
-        }
-
+        request.setAttribute("styles",result);
+RequestDispatcher view = request.getRequestDispatcher("result.jsp");
+view.forward(request,response);
+    }
 }
