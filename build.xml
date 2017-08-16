@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="webproject">
+
+
+  <path id="common_library">
+
+
+    <pathelement location="localtest/apache-tomcat-9.0.0.M26/lib/servlet-api.jar">
+
+    </pathelement>
+  </path>
+
+  <target name ="compile">
+<javac srcdir="src" destdir="web/WEB-INF/classes" failonerror="true" fork="true" >
+  <classpath refid="common_library"/>
+
+</javac>
+
+  </target>
+</project>
