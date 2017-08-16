@@ -10,6 +10,6 @@ public class BeerClass extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("Beer Selection Advice<br>");
         String c = request.getParameter("color");
-        out.println("<br>Got beer coooooolor " + c);
+        out.println("<br>Got beer coooooolor0 " + c);
     }
 }
