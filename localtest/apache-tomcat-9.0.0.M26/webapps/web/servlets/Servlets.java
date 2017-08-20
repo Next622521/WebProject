@@ -1,4 +1,4 @@
-package ru.mysite.web.servlets;
+package ua.mysite.web.servlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

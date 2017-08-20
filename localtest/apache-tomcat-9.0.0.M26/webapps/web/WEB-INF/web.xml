@@ -4,9 +4,47 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <context-param>
+        <param-name>breed</param-name>
+        <param-value>Great Dane</param-value>
+    </context-param>
+    <context-param>
+        <param-name>Lol</param-name>
+        <param-value>Lol.com</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>
+            ua.mysite.web.servlets.ListenerClass
+        </listener-class>
+    </listener>
+
+
+    <servlet>
+        <servlet-name>AB</servlet-name>
+        <servlet-class>
+            ua.mysite.web.servlets.ListenerTester
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AB</servlet-name>
+        <url-pattern>/AE</url-pattern>
+    </servlet-mapping>
+
+
+
+
     <servlet>
         <servlet-name>Ch3 Beer</servlet-name>
-        <servlet-class>ru.mysite.web.servlets.BeerClass</servlet-class>
+        <servlet-class>ua.mysite.web.servlets.BeerClass</servlet-class>
+        <init-param>
+            <param-name>adminEmail</param-name>
+            <param-value>likewecare@wickedlysmart.com</param-value>
+        </init-param>
+        <init-param>
+            <param-name>mainEmail</param-name>
+            <param-value>blooper@wickedlysmart.com</param-value>
+        </init-param>
     </servlet>
 
     <servlet-mapping>
@@ -16,7 +54,7 @@
     <servlet>
         <servlet-name>Simple</servlet-name>
         <servlet-class>
-            ru.mysite.web.servlets.SimpleServlet
+            ua.mysite.web.servlets.SimpleServlet
         </servlet-class>
     </servlet>
     <servlet-mapping>
@@ -26,7 +64,7 @@
 
     <servlet>
         <servlet-name>Ch3Beer1</servlet-name>
-        <servlet-class>ru.mysite.web.servlets.Servlets</servlet-class>
+        <servlet-class>ua.mysite.web.servlets.Servlets</servlet-class>
     </servlet>
 
     <servlet-mapping>
