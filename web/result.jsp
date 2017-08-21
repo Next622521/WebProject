@@ -12,6 +12,7 @@
  }
  out.print(" ");
  out.print(request.getAttribute("adminEmail"));
+ out.print(request.getCookies().length);
 %>
 </body>
 </html>

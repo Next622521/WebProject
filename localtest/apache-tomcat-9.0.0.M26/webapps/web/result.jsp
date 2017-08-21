@@ -11,7 +11,8 @@
  out.print("<br>try:" + it.next());
  }
  out.print(" ");
- out.print(request.getAttribute("adminEmail"));
+ out.println(request.getAttribute("adminEmail"));
+ out.println(request.getCookies()[0]);
 %>
 </body>
 </html>
